@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami - Portal Politikku Indonesia</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Opsional: Ikon Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand  active" href="./beritaku.html"><span id="brandName">Politikku Indonesia</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./landingpage.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./artikels.html">Artikel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./events.html">Event</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Kontak</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bagian Tentang -->
+  <div class="container mt-5">
+    <h1 class="mb-4">Tentang <span id="brandName">Politikku Indonesia</span></h1>
+    <p><span id="brandName">Politikku Indonesia</span> adalah portal berita yang bertujuan untuk menyediakan informasi terkini seputar dunia politik, analisis mendalam, serta opini dari berbagai sumber yang terpercaya.</p>
+    <p>Kami berkomitmen untuk memberikan informasi yang akurat dan berimbang kepada para pembaca kami. Dengan tim jurnalis yang berpengalaman, kami mencoba untuk menjembatani kesenjangan informasi dalam ranah politik.</p>
+    <p>Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan atau ingin berkontribusi dengan artikel atau opini Anda sendiri. Kami selalu terbuka untuk kolaborasi dan saran dari pembaca kami.</p>
+    <h2>Tim Kami</h2>
+    <div class="row mt-3">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <img src="./src/img/ALIF NURHIDAYAT_G1A022073_v3 (1).png" class="card-img-top" alt="..." style="
+          height: 70vh;
+          ">
+          <div class="card-body">
+            <h5 class="card-title">Alif Nurhidayat</h5>
+            <p class="card-text">Pemimpin Redaksi</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <img src="./src/img/Greed_Mini_Form.webp" class="card-img-top" alt="..." style="
+          height: 70vh;
+          ">
+          <div class="card-body">
+            <h5 class="card-title">Little Greed</h5>
+            <p class="card-text">Jurnalis Utama</p>
+          </div>
+        </div>
+      </div>
+      <!-- Tambahkan lebih banyak anggota tim sesuai kebutuhan -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md">
+          <small class="d-block mb-3 text-muted">&copy; 2023 <span id="brandName">Politikku Indonesia</span></small>
+          <small class="d-block mb-3 text-muted"> Made With Love by Alif Nurhidayat</small>
+          <small class="d-block mb-3 text-muted"> NPM: G1A022073</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Tentang Kami</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary" href="./beritaku.html">Tim Kami</a></li>
+            <li><a class="link-secondary" href="#">Lokasi</a></li>
+            <li><a class="link-secondary" href="#">Privasi</a></li>
+            <li><a class="link-secondary" href="#">Syarat</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Kontak</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary" href="#">Instagram</a></li>
+            <li><a class="link-secondary" href="#">Facebook</a></li>
+            <li><a class="link-secondary" href="#">Twitter</a></li>
+            <li><a class="link-secondary" href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Button untuk mengganti nama brand -->
+  <button id="changeBrandNameBtn" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-3" style="width: 50px; height: 50px;"><i class="bi bi-pencil-fill">;3</i></button>
+
+  <!-- Bootstrap Bundle dengan Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Function untuk mengganti nama brand
+    function changeBrandName() {
+      const newBrandName = prompt("Masukkan nama baru untuk portal:");
+      if (newBrandName !== null && newBrandName !== "") {
+        const brandNameElements = document.querySelectorAll('#brandName');
+        brandNameElements.forEach(element => {
+          element.textContent = newBrandName;
+        });
+        document.title = "Tentang Kami - Portal " + newBrandName;
+      }
+    }
+
+    // Event listener untuk tombol
+    document.getElementById("changeBrandNameBtn").addEventListener("click", changeBrandName);
+  </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal <span id="brandName">Politikku Indonesia</span></title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Opsional: Bootstrap Ikon -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="./beritaku.html"><span id="brandName">Politikku Indonesia</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigasi beralih">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./landingpage.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./artikels.html">Artikel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./events.html">Event</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Kontak</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Seksi Hero -->
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">Selamat Datang di <span id="brandName">Politikku Indonesia</span></h1>
+      <p class="col-md-8 fs-4">Sumber informasi dan analisis politik terkini.</p>
+      <button class="btn btn-primary btn-lg" onclick="location.href='./artikels.html'" type="button">Baca Artikel Terbaru</button>
+    </div>
+  </div>
+
+  <!-- Karusel Berita Terbaru -->
+  <div class="container">
+    <h2 class="mb-4">Berita Terbaru</h2>
+    <div id="latestNewsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Konten akan dimasukkan secara dinamis di sini -->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#latestNewsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Sebelumnya</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#latestNewsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Berikutnya</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Karusel Berita Trending -->
+  <div class="container">
+    <h2 class="mt-4 mb-4">Berita Trending</h2>
+    <div id="trendingNewsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Konten akan dimasukkan secara dinamis di sini -->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#trendingNewsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Sebelumnya</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#trendingNewsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Berikutnya</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle dengan Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- JavaScript untuk mengambil dan mempopulasi karusel dari artikels.html -->
+  <script>
+    // Mengambil konten karusel berita terbaru dari artikels.html
+    fetch('./artikels.html')
+      .then(response => response.text())
+      .then(data => {
+        const parser = new DOMParser();
+        const htmlDocument = parser.parseFromString(data, 'text/html');
+        const latestNewsCarouselContent = htmlDocument.getElementById('latestNewsCarousel').innerHTML;
+        document.querySelector('#latestNewsCarousel .carousel-inner').innerHTML = latestNewsCarouselContent;
+      });
+
+    // Mengambil konten karusel berita trending dari artikels.html
+    fetch('./artikels.html')
+      .then(response => response.text())
+      .then(data => {
+        const parser = new DOMParser();
+        const htmlDocument = parser.parseFromString(data, 'text/html');
+        const trendingNewsCarouselContent = htmlDocument.getElementById('trendingNewsCarousel').innerHTML;
+        document.querySelector('#trendingNewsCarousel .carousel-inner').innerHTML = trendingNewsCarouselContent;
+      });
+  </script>
+
+  <!-- Footer -->
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md">
+          <small class="d-block mb-3 text-muted">&copy; 2023 <span id="brandName">Politikku Indonesia</span></small>
+          <small class="d-block mb-3 text-muted"> Made With Love by Alif Nurhidayat</small>
+          <small class="d-block mb-3 text-muted"> NPM: G1A022073</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Tentang Kami</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary" href="./beritaku.html">Tim Kami</a></li>
+            <li><a class="link-secondary" href="#">Lokasi</a></li>
+            <li><a class="link-secondary" href="#">Privasi</a></li>
+            <li><a class="link-secondary" href="#">Syarat</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Kontak</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary" href="#">Instagram</a></li>
+            <li><a class="link-secondary" href="#">Facebook</a></li>
+            <li><a class="link-secondary" href="#">Twitter</a></li>
+            <li><a class="link-secondary" href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle dengan Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Button untuk mengganti nama brand -->
+  <button id="changeBrandNameBtn" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-3" style="width: 50px; height: 50px;"><i class="bi bi-pencil-fill">;3</i></button>
+
+  <!-- Bootstrap Bundle dengan Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Function untuk mengganti nama brand
+    function changeBrandName() {
+      const newBrandName = prompt("Masukkan nama baru untuk portal:");
+      if (newBrandName !== null && newBrandName !== "") {
+        const brandNameElements = document.querySelectorAll('#brandName');
+        brandNameElements.forEach(element => {
+          element.textContent = newBrandName;
+        });
+        document.title = "Tentang Kami - Portal " + newBrandName;
+      }
+    }
+
+    // Event listener untuk tombol
+    document.getElementById("changeBrandNameBtn").addEventListener("click", changeBrandName);
+  </script>
+</body>
+</html>

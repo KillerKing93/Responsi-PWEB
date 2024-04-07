@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles - Portal <span id="brandName">Politikku Indonesia</span></title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Optional: Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="./beritaku.html"><span id="brandName">Politikku Indonesia</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./landingpage.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./artikels.html">Artikel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./events.html">Event</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Kontak</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-lg-6">
+        <h3>Latest News</h3>
+        <div id="latestNewsCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img img style="height:50vh;" src="./src/berita/Kebijakan_BARU_Pemerintah.jpg_large" class="d-block w-100" alt="Kebijakan Baru Pemerintah">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 style="color:rgb(230, 250, 97); font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Kebijakan Baru Pemerintah</h5>
+                <p style="color:rgb(230, 250, 97); font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Pemerintah mengumumkan serangkaian kebijakan baru yang bertujuan untuk meningkatkan kesejahteraan masyarakat.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img img style="height:50vh;" src="./src/berita/Pemilu_Mendatang.png" class="d-block w-100" alt="Pemilu Mendatang">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 style="color:rgb(230, 250, 97); font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Pemilu Mendatang</h5>
+                <p style="color:rgb(230, 250, 97); font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Indonesia bersiap untuk pemilihan umum, dengan partai-partai politik mulai mengumumkan kandidat mereka.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#latestNewsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#latestNewsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <h3>Trending News</h3>
+        <div id="trendingNewsCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img img style="height:50vh;" src="./src/berita/Debat_Kandidat_Presiden.jpg" class="d-block w-100" alt="Debat Kandidat Presiden">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 style="color:rgb(230, 250, 97); font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Debat Kandidat Presiden</h5>
+                <p style="color:rgb(230, 250, 97); font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Debat terbaru antara kandidat presiden menghasilkan diskusi yang sengit tentang masa depan negara.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img img style="height:50vh;" src="./src/berita/Reformasi_Perpajakan.webp" class="d-block w-100" alt="Reformasi Pajak">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 style="color:rgb(230, 250, 97); font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Reformasi Pajak</h5>
+                <p style="color:rgb(230, 250, 97); font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Parlemen mengusulkan reformasi pajak besar-besaran untuk memperkuat ekonomi nasional.</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#trendingNewsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#trendingNewsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Articles List -->
+  <div class="container mt-5">
+    <h2>Articles</h2>
+    <div class="row">
+      <!-- Article 1 -->
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img style="height:50vh;" src="./src/berita/Pemilu_Mendatang.png" class="card-img-top" alt="Pemilihan Umum">
+          <div class="card-body">
+            <h5 class="card-title">Pemilihan Umum 2024: Persiapan dan Harapan</h5>
+            <p class="card-text">Seiring mendekatnya Pemilihan Umum 2024, berbagai persiapan dilakukan oleh KPU. Masyarakat pun berharap pemilu kali ini dapat berjalan lancar dan adil.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Article 2 -->
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img style="height:50vh;" src="./src/berita/Reformasi-birokrasi.jpg" class="card-img-top" alt="Reformasi Birokrasi">
+          <div class="card-body">
+            <h5 class="card-title">Upaya Reformasi Birokrasi untuk Pemerintahan yang Lebih Baik</h5>
+            <p class="card-text">Pemerintah terus berupaya melakukan reformasi birokrasi guna meningkatkan kualitas layanan publik dan efisiensi pemerintahan.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Article 3 -->
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img style="height:50vh;" src="./src/berita/Kekuatan_Diplomasi.png" class="card-img-top" alt="Diplomasi Indonesia">
+          <div class="card-body">
+            <h5 class="card-title">Mengukur Kekuatan Diplomasi Indonesia di Kancah Internasional</h5>
+            <p class="card-text">Indonesia terus berupaya meningkatkan perannya di kancah internasional melalui diplomasi yang aktif dan berprinsip.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Article 4 -->
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img style="height:50vh;" src="./src/berita/Politik_Media_Sosial.jpeg" class="card-img-top" alt="Politik dan Media Sosial">
+          <div class="card-body">
+            <h5 class="card-title">Dinamika Politik di Media Sosial: Antara Informasi dan Hoax</h5>
+            <p class="card-text">Media sosial menjadi arena baru dalam dinamika politik Indonesia, namun tantangan berupa penyebaran informasi palsu juga meningkat.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Article 5 -->
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img style="height:50vh;" src="./src/berita/contoh-interaksi-di-bidang-ekono-20221111063434.jpg" class="card-img-top" alt="Ekonomi dan Politik">
+          <div class="card-body">
+            <h5 class="card-title">Interaksi Ekonomi dan Politik dalam Pembangunan Nasional</h5>
+            <p class="card-text">Bagaimana ekonomi dan politik saling berinteraksi dan mempengaruhi pembangunan nasional Indonesia.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Article 6 -->
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img style="height:50vh;" src="./src/berita/1808_Kerja_Beersama_Membangun_Stabilitas_Negara.jpg" class="card-img-top" alt="Hukum dan Politik">
+          <div class="card-body">
+            <h5 class="card-title">Peran Hukum dalam Menjaga Stabilitas Politik</h5>
+            <p class="card-text">Menjaga stabilitas politik melalui penguatan hukum dan keadilan menjadi salah satu prioritas pemerintah.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Article 7 -->
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img style="height:50vh;" src="./src/berita/edukasi_politik.jpeg" class="card-img-top" alt="Pendidikan Politik">
+          <div class="card-body">
+            <h5 class="card-title">Menggagas Pendidikan Politik untuk Masyarakat yang Lebih Cerdas</h5>
+            <p class="card-text">Pendidikan politik menjadi kunci untuk menciptakan masyarakat yang cerdas secara politik dan berpartisipasi aktif dalam demokrasi.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Article 8 -->
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img style="height:50vh;" src="./src/berita/politik-luar-negeri.jpeg" class="card-img-top" alt="Politik Luar Negeri">
+          <div class="card-body">
+            <h5 class="card-title">Kebijakan Politik Luar Negeri Indonesia dan Tantangannya</h5>
+            <p class="card-text">Indonesia menghadapi berbagai tantangan dalam kebijakan politik luar negerinya, bagaimana strategi menghadapinya?</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Article 9 -->
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img style="height:50vh;" src="./src/berita/demokrasi_digital_74860-kominfo.jpg" class="card-img-top" alt="Demokrasi Digital">
+          <div class="card-body">
+            <h5 class="card-title">Demokrasi Digital: Peluang dan Risiko</h5>
+            <p class="card-text">Demokrasi digital menawarkan peluang baru untuk partisipasi politik, namun juga membawa risiko yang harus diwaspadai.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md">
+          <small class="d-block mb-3 text-muted">&copy; 2023 <span id="brandName">Politikku Indonesia</span></small>
+          <small class="d-block mb-3 text-muted"> Made With Love by Alif Nurhidayat</small>
+          <small class="d-block mb-3 text-muted"> NPM: G1A022073</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Tentang Kami</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary" href="./beritaku.html">Tim Kami</a></li>
+            <li><a class="link-secondary" href="#">Lokasi</a></li>
+            <li><a class="link-secondary" href="#">Privasi</a></li>
+            <li><a class="link-secondary" href="#">Syarat</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Kontak</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary" href="#">Instagram</a></li>
+            <li><a class="link-secondary" href="#">Facebook</a></li>
+            <li><a class="link-secondary" href="#">Twitter</a></li>
+            <li><a class="link-secondary" href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Button untuk mengganti nama brand -->
+  <button id="changeBrandNameBtn" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-3" style="width: 50px; height: 50px;"><i class="bi bi-pencil-fill">;3</i></button>
+
+  <!-- Bootstrap Bundle dengan Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Function untuk mengganti nama brand
+    function changeBrandName() {
+      const newBrandName = prompt("Masukkan nama baru untuk portal:");
+      if (newBrandName !== null && newBrandName !== "") {
+        const brandNameElements = document.querySelectorAll('#brandName');
+        brandNameElements.forEach(element => {
+          element.textContent = newBrandName;
+        });
+        document.title = "Tentang Kami - Portal " + newBrandName;
+      }
+    }
+
+    // Event listener untuk tombol
+    document.getElementById("changeBrandNameBtn").addEventListener("click", changeBrandName);
+  </script>
+</body>
+</html>
